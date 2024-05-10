@@ -44,16 +44,57 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
         backgroundColor: Colors.grey[900],
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            DrawerHeader(
-                child: Image.asset(
-              'lib/images/starbucks.svg.webp',
-            )),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
-              child: Divider(
-                color: Colors.grey[800],
-              ),
+            Column(
+              children: [
+                DrawerHeader(
+                    child: Image.asset(
+                  'lib/images/starbucks.svg.webp',
+                )),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: Divider(
+                    color: Colors.grey[800],
+                  ),
+                ),
+                Padding(
+                    padding: const EdgeInsets.only(left: 25),
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.home,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        'Home',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )),
+                Padding(
+                    padding: const EdgeInsets.only(left: 25),
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.info,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        'About',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )),
+                Padding(
+                    padding: const EdgeInsets.only(left: 25),
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.logout,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        'Logout',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )),
+              ],
             )
           ],
         ),
